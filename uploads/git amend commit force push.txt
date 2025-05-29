@@ -1,0 +1,29 @@
+git add .
+git commit --amend --no-edit
+git push --force
+
+############
+
+Here’s a guide on how to use the commands in your file:
+
+00. Include your changes in the files
+
+0. Go to Terminal Tab > New Terminal
+
+1. git add .
+This command stages all the changes in your working directory (including new, modified, or deleted files) for the next commit.
+Use case: When you’ve made changes to files and want to include them in your commit.
+
+After running this, all changes will be staged.
+
+2. git commit --amend --no-edit
+This command modifies the most recent commit without changing its commit message.
+Use case: When you forgot to include some changes in your last commit or need to update it.
+
+3. git push --force
+This command forces your local branch to overwrite the remote branch.
+Use case: After amending a commit, the commit history changes, so you need to force push to update the remote branch.
+
+When to Use This Workflow
+You forgot to include some changes in your last commit.
+You need to fix or update the last commit without creating a new one.

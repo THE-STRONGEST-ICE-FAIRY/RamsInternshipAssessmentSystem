@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Send pretty URLs to the actual PHP files
+RewriteRule ^admin/?$ templates/admin/_index.html [L]
+RewriteRule ^faculty/?$ templates/faculty/_index.html [L]
+RewriteRule ^supervisor/?$ templates/supervisor/_index.html [L]
+RewriteRule ^student/?$ templates/student/_index.html [L]

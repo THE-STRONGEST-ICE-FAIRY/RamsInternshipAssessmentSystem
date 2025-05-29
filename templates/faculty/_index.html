@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMS Internship Assessment System - INTERNSHIP OFFICER</title>
+    <link rel="stylesheet" href="/_rias/static/css/page_layout.css">
+    <link rel="icon" type="image/png" href="/_rias/static/images/rias_icon.png">
+</head>
+
+<body class="body">
+    <iframe src="/_rias/templates/_components/header.html" class="header" id="headerFrame"></iframe>
+    
+    <div class="container">
+        <iframe src="/_rias/templates/_components/sidebar.html" class="sidebar" id="sidebarFrame"></iframe>
+
+        <script>
+            const userRole = "faculty";
+
+            document.getElementById("sidebarFrame").addEventListener("load", function() {
+                this.contentWindow.postMessage({ role: userRole }, "*");
+            });
+
+            const userRole2 = "INTERNSHIP OFFICER";
+
+            document.getElementById("headerFrame").addEventListener("load", function() {
+                this.contentWindow.postMessage({ role: userRole2 }, "*");
+            });
+        </script>
+
+        <iframe id="content" src="/_rias/templates/faculty/home.html" class="content"></iframe>
+    </div>
+
+    <iframe src="/_rias/templates/_components/footer.html" class="footer"></iframe>
+</body>
+</html>
