@@ -1,0 +1,66 @@
+<head>
+    <link rel="stylesheet" href="/_rias/templates/_components/page_layout.css">
+</head>
+
+<body class="content">
+    <div class="box-shadow">
+        <div class="content-card">
+            <button id="back">Back to Masterlist</button>
+            <h1>Companies</h1>
+
+            <div style="overflow-y: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Email</th>
+                            <th>Name</th>
+                            <th>Website</th>
+                            <th>Address</th>
+                            <th>Departments</th>
+                            <th>Supervisors</th>
+                            <th>Intern Allowance</th>
+                            <th>Partnership Status</th>
+                            <th>Revenue Growth</th>
+                            <th>Profit Margins</th>
+                            <th>ROI</th>
+                            <th>ROA</th>
+                        </tr>
+                    </thead>
+                    <tbody id="companyList">
+                    </tbody>
+                </table>
+            </div>
+
+            <form id="addCompanyForm">
+                <h3>Add New Company</h3>
+              
+                <label>Company Name:</label><br>
+                <input type="text" name="company_name" required><br><br>
+              
+                <label>Company Email:</label><br>
+                <input type="email" name="company_email" required><br><br>
+              
+                <label>Company Website:</label><br>
+                <input type="url" name="company_website"><br><br>
+              
+                <label>Company Address:</label><br>
+                <textarea name="company_address" required></textarea><br><br>
+              
+                <label>Intern Allowance (₱):</label><br>
+                <input type="number" step="0.01" name="intern_allowance"><br><br>
+              
+                <label>Partnership Status:</label><br>
+                <select name="partnership_status">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select><br><br>
+              
+                <button type="submit">Add Company</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="masterlist~company.js"></script>
+<script src="../../templates/_components/sidebar.js"></script>

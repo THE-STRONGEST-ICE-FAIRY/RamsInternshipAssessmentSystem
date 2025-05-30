@@ -82,7 +82,8 @@ if ($result->num_rows === 1) {
         // Set session values
         $_SESSION['user_id'] = $user_id;
         $_SESSION['schooluser_id'] = $row['schooluser_id'];
-        $_SESSION['name'] = $row['user_first_name'] . ' ' . $row['user_last_name'];
+        $_SESSION['first_name'] = $row['user_first_name'];
+        $_SESSION['last_name'] =  $row['user_last_name'];
         $_SESSION['role'] = $selected_role;
         session_regenerate_id(true);
 

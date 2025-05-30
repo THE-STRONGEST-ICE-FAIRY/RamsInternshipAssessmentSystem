@@ -1,0 +1,115 @@
+<head>
+    <link rel="stylesheet" href="/_rias/templates/_components/page_layout.css">
+</head>
+
+<body class="content">
+    <div class="box-shadow">
+        <div class="content-card">
+            <button id="back">Back to Masterlist</button>
+            <h1>Student Interns</h1>
+
+            <div style="overflow-y: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Email</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Birthdate</th>
+                            <th>Address</th>
+                            <th>Date Added</th>
+                            <th>Date Updated</th>
+                            <th>Batch</th>
+                            <th>School</th>
+                            <th>Program</th>
+                            <th>Internship Year</th>
+                            <th>Internship Start</th>
+                            <th>Internship End</th>
+                            <th>Company</th>
+                            <th>Department</th>
+                            <th>Job Role</th>
+                            <th>Supervisor</th>
+                            <th>Supervisor Email</th>
+                            <th>Supervisor Contact No.</th>
+                            <th>Assessment</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentInternList">
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Add New Student Interns</h3>
+            <form id="bulkAddInternForm">
+                <div style="overflow-y: auto;">
+                    <table id="internTable" border="1">
+                        <thead>
+                        <tr>
+                            <th>Email*</th>
+                            <th>First Name*</th>
+                            <th>Last Name*</th>
+                            <th>School*</th>
+                            <th>Program*</th>
+                            <th>Birthdate</th>
+                            <th>Gender</th>
+                            <th>City</th>
+                            <th>Province/State</th>
+                            <th>Postal Code</th>
+                            <th>Country</th>
+                            <th>School ID</th>
+                            <th>Internship Start</th>
+                            <th>Internship End</th>
+                            <th>Company</th>
+                            <th>Department</th>
+                            <th>Job Role</th>
+                            <th>Supervisor</th>
+                            <th>Remove Row</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="email" name="user_email[]" required></td>
+                            <td><input type="text" name="user_first_name[]" required></td>
+                            <td><input type="text" name="user_last_name[]" required></td>
+                            <td>
+                                <input list="schoolOptions" name="school_id[]" class="schoolInput" autocomplete="off" />
+                                <datalist id="schoolOptions"></datalist>
+                            </td>
+                            <td>
+                                <input list="programOptions" name="program_id[]" class="programInput" autocomplete="off" />
+                                <datalist id="programOptions"></datalist>
+                            </td>
+                            <td><input type="date" name="intern_birthdate[]"></td>
+                            <td>
+                                <input list="genderOptions" name="intern_gender[]" autocomplete="off" />
+                                <datalist id="genderOptions">
+                                    <option value="Male"></option>
+                                    <option value="Female"></option>
+                                </datalist>
+                            </td>
+                            <td><input type="text" name="intern_city[]"></td>
+                            <td><input type="text" name="intern_province_or_state[]"></td>
+                            <td><input type="text" name="intern_postal_code[]"></td>
+                            <td><input type="text" name="intern_country[]"></td>
+                            <td><input type="text" name="school_given_id[]"></td>
+                            <td><input type="date" name="internship_date_started[]"></td>
+                            <td><input type="date" name="internship_date_ended[]"></td>
+                            <td><input type="text" name="company_id[]"></td>
+                            <td><input type="text" name="department_id[]"></td>
+                            <td><input type="text" name="job_role_id[]"></td>
+                            <td><input type="text" name="supervisor_id[]"></td>
+                            <td><button type="button" class="removeRow">🗑️</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button type="button" onclick="addRow()">➕ Add Row</button>
+                <button type="submit">🚀 Submit All</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="masterlist~student.js"></script>
+<script src="../../templates/_components/sidebar.js"></script>
